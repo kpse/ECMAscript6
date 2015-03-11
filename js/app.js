@@ -1,3 +1,5 @@
+require('traceur');
+
 console.log(`${1 + 1}`);
 
 let message = 'hi';
@@ -23,3 +25,14 @@ fs.forEach(function (f) {
 
 var arrowGreeting = (message, name) => message + ' ' + name;
 console.log(arrowGreeting("hello", 'name'));
+
+function greet(greeting, name = "kpse") {
+  console.log(greeting + ", " + name);
+}
+
+greet("hello");
+
+var [one,,,,,six] = ["111", "1", "1", "1", "1", "222"];
+
+console.log(one);
+console.log(six);
